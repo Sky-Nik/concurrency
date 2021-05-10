@@ -6,6 +6,9 @@ import os
 from prettytable import PrettyTable
 
 
+OUTPUT_FILE = open('process-monitor-sample-output.txt', 'w', encoding='utf-8')
+
+
 def clear():
     if os.name == 'nt':  # win
         os.system('cls')
@@ -24,7 +27,7 @@ def print_battery():
         battery_stats.percent,
         battery_stats.power_plugged
     ])
-    print(battery_table)
+    print(battery_table, file=OUTPUT_FILE)
 
 
 # Network Information
@@ -40,7 +43,7 @@ def print_network():
             'Up' if network_stats.isup else 'Down',
             network_stats.speed
         ])
-    print(network_table.get_string(sortby='Speed', reversesort=True))
+    print(network_table.get_string(sortby='Speed', reversesort=True), file=OUTPUT_FILE)
 
 
 # Memory Information
@@ -57,7 +60,7 @@ def print_memory():
         memory_stats.available // mb,
         memory_stats.percent
     ])
-    print(memory_table)
+    print(memory_table, file=OUTPUT_FILE)
 
 
 ACTIVE_PIDS = {}
@@ -87,11 +90,14 @@ def print_process():
                 ])
         except Exception as e:  # the process finished before we could print its information
             pass
-    print(process_table.get_string(sort_key=lambda row: float(row[5][:-1]), sortby='Memory', reversesort=True))
+    table = process_table.get_string(sort_key=lambda row: float(row[5][:-1]), sortby='Memory', reversesort=True)
+    print(table, file=OUTPUT_FILE)
+    print(file=OUTPUT_FILE)
     for process_id in NEW_PIDS.keys() - ACTIVE_PIDS.keys():
-        print(f'New process {process_id}, {NEW_PIDS[process_id]}')
+        print(f'New process {process_id}, {NEW_PIDS[process_id]}', file=OUTPUT_FILE)
+    print(file=OUTPUT_FILE)
     for process_id in ACTIVE_PIDS.keys() - NEW_PIDS.keys():
-        print(f'Process {process_id}, {ACTIVE_PIDS[process_id]} has finished')
+        print(f'Process {process_id}, {ACTIVE_PIDS[process_id]} has finished', file=OUTPUT_FILE)
     ACTIVE_PIDS = NEW_PIDS
 
 
@@ -100,5 +106,5 @@ if __name__ == '__main__':
         # clear()
         for print_function in (print_battery, print_network, print_memory, print_process):
             print_function()
-            print()
+            print(file=OUTPUT_FILE)
         time.sleep(5)  # seconds
