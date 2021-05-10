@@ -1,0 +1,211 @@
+Continue [c], break [B] or run nonstop? [r] B
+uu(False) || uu(False) is undefined
+Continue [c], break [B] or run nonstop? [r] B
+uu(True) || uu(True) is undefined
+Continue [c], break [B] or run nonstop? [r] B
+uu(False) || fu(False) is undefined
+Continue [c], break [B] or run nonstop? [r] B
+uu(True) || fu(True) is undefined
+Continue [c], break [B] or run nonstop? [r] B
+uu(False) || uf(False) is undefined
+Continue [c], break [B] or run nonstop? [r] B
+uu(True) || uf(True) is undefined
+Continue [c], break [B] or run nonstop? [r] B
+uu(False) || ff(False) is undefined
+Continue [c], break [B] or run nonstop? [r] B
+uu(True) || ff(True) is undefined
+Continue [c], break [B] or run nonstop? [r] B
+uu(False) || tu(False) is undefined
+uu(True) || tu(True) == True
+uu(False) || ut(False) == True
+Continue [c], break [B] or run nonstop? [r] B
+uu(True) || ut(True) is undefined
+uu(False) || tt(False) == True
+uu(True) || tt(True) == True
+Continue [c], break [B] or run nonstop? [r] B
+uu(False) || tf(False) is undefined
+uu(True) || tf(True) == True
+uu(False) || ft(False) == True
+Continue [c], break [B] or run nonstop? [r] B
+uu(True) || ft(True) is undefined
+Continue [c], break [B] or run nonstop? [r] B
+fu(False) || uu(False) is undefined
+Continue [c], break [B] or run nonstop? [r] B
+fu(True) || uu(True) is undefined
+Continue [c], break [B] or run nonstop? [r] B
+fu(False) || fu(False) is undefined
+fu(True) || fu(True) == False
+Continue [c], break [B] or run nonstop? [r] B
+fu(False) || uf(False) is undefined
+Continue [c], break [B] or run nonstop? [r] B
+fu(True) || uf(True) is undefined
+Continue [c], break [B] or run nonstop? [r] B
+fu(False) || ff(False) is undefined
+fu(True) || ff(True) == False
+Continue [c], break [B] or run nonstop? [r] B
+fu(False) || tu(False) is undefined
+fu(True) || tu(True) == True
+fu(False) || ut(False) == True
+Continue [c], break [B] or run nonstop? [r] B
+fu(True) || ut(True) is undefined
+fu(False) || tt(False) == True
+fu(True) || tt(True) == True
+Continue [c], break [B] or run nonstop? [r] B
+fu(False) || tf(False) is undefined
+fu(True) || tf(True) == True
+fu(False) || ft(False) == True
+fu(True) || ft(True) == False
+Continue [c], break [B] or run nonstop? [r] B
+uf(False) || uu(False) is undefined
+Continue [c], break [B] or run nonstop? [r] B
+uf(True) || uu(True) is undefined
+Continue [c], break [B] or run nonstop? [r] B
+uf(False) || fu(False) is undefined
+Continue [c], break [B] or run nonstop? [r] B
+uf(True) || fu(True) is undefined
+uf(False) || uf(False) == False
+Continue [c], break [B] or run nonstop? [r] B
+uf(True) || uf(True) is undefined
+uf(False) || ff(False) == False
+Continue [c], break [B] or run nonstop? [r] B
+uf(True) || ff(True) is undefined
+Continue [c], break [B] or run nonstop? [r] B
+uf(False) || tu(False) is undefined
+uf(True) || tu(True) == True
+uf(False) || ut(False) == True
+Continue [c], break [B] or run nonstop? [r] B
+uf(True) || ut(True) is undefined
+uf(False) || tt(False) == True
+uf(True) || tt(True) == True
+uf(False) || tf(False) == False
+uf(True) || tf(True) == True
+uf(False) || ft(False) == True
+Continue [c], break [B] or run nonstop? [r] B
+uf(True) || ft(True) is undefined
+Continue [c], break [B] or run nonstop? [r] B
+ff(False) || uu(False) is undefined
+Continue [c], break [B] or run nonstop? [r] B
+ff(True) || uu(True) is undefined
+Continue [c], break [B] or run nonstop? [r] B
+ff(False) || fu(False) is undefined
+ff(True) || fu(True) == False
+ff(False) || uf(False) == False
+Continue [c], break [B] or run nonstop? [r] B
+ff(True) || uf(True) is undefined
+ff(False) || ff(False) == False
+ff(True) || ff(True) == False
+Continue [c], break [B] or run nonstop? [r] B
+ff(False) || tu(False) is undefined
+ff(True) || tu(True) == True
+ff(False) || ut(False) == True
+Continue [c], break [B] or run nonstop? [r] B
+ff(True) || ut(True) is undefined
+ff(False) || tt(False) == True
+ff(True) || tt(True) == True
+ff(False) || tf(False) == False
+ff(True) || tf(True) == True
+ff(False) || ft(False) == True
+ff(True) || ft(True) == False
+Continue [c], break [B] or run nonstop? [r] B
+tu(False) || uu(False) is undefined
+tu(True) || uu(True) == True
+Continue [c], break [B] or run nonstop? [r] B
+tu(False) || fu(False) is undefined
+tu(True) || fu(True) == True
+Continue [c], break [B] or run nonstop? [r] B
+tu(False) || uf(False) is undefined
+tu(True) || uf(True) == True
+Continue [c], break [B] or run nonstop? [r] B
+tu(False) || ff(False) is undefined
+tu(True) || ff(True) == True
+Continue [c], break [B] or run nonstop? [r] B
+tu(False) || tu(False) is undefined
+tu(True) || tu(True) == True
+tu(False) || ut(False) == True
+tu(True) || ut(True) == True
+tu(False) || tt(False) == True
+tu(True) || tt(True) == True
+Continue [c], break [B] or run nonstop? [r] c
+Continue [c], break [B] or run nonstop? [r] B
+tu(False) || tf(False) is undefined
+tu(True) || tf(True) == True
+tu(False) || ft(False) == True
+tu(True) || ft(True) == True
+ut(False) || uu(False) == True
+Continue [c], break [B] or run nonstop? [r] B
+ut(True) || uu(True) is undefined
+ut(False) || fu(False) == True
+Continue [c], break [B] or run nonstop? [r] B
+ut(True) || fu(True) is undefined
+ut(False) || uf(False) == True
+Continue [c], break [B] or run nonstop? [r] B
+ut(True) || uf(True) is undefined
+ut(False) || ff(False) == True
+Continue [c], break [B] or run nonstop? [r] B
+ut(True) || ff(True) is undefined
+ut(False) || tu(False) == True
+ut(True) || tu(True) == True
+ut(False) || ut(False) == True
+Continue [c], break [B] or run nonstop? [r] B
+ut(True) || ut(True) is undefined
+ut(False) || tt(False) == True
+ut(True) || tt(True) == True
+ut(False) || tf(False) == True
+ut(True) || tf(True) == True
+ut(False) || ft(False) == True
+Continue [c], break [B] or run nonstop? [r] B
+ut(True) || ft(True) is undefined
+tt(False) || uu(False) == True
+tt(True) || uu(True) == True
+tt(False) || fu(False) == True
+tt(True) || fu(True) == True
+tt(False) || uf(False) == True
+tt(True) || uf(True) == True
+tt(False) || ff(False) == True
+tt(True) || ff(True) == True
+tt(False) || tu(False) == True
+tt(True) || tu(True) == True
+tt(False) || ut(False) == True
+tt(True) || ut(True) == True
+tt(False) || tt(False) == True
+tt(True) || tt(True) == True
+tt(False) || tf(False) == True
+tt(True) || tf(True) == True
+tt(False) || ft(False) == True
+tt(True) || ft(True) == True
+Continue [c], break [B] or run nonstop? [r] c
+Continue [c], break [B] or run nonstop? [r] B
+tf(False) || uu(False) is undefined
+tf(True) || uu(True) == True
+Continue [c], break [B] or run nonstop? [r] B
+tf(False) || fu(False) is undefined
+tf(True) || fu(True) == True
+tf(False) || uf(False) == False
+tf(True) || uf(True) == True
+tf(False) || ff(False) == False
+tf(True) || ff(True) == True
+Continue [c], break [B] or run nonstop? [r] B
+tf(False) || tu(False) is undefined
+tf(True) || tu(True) == True
+tf(False) || ut(False) == True
+tf(True) || ut(True) == True
+tf(False) || tt(False) == True
+tf(True) || tt(True) == True
+tf(False) || tf(False) == False
+tf(True) || tf(True) == True
+tf(False) || ft(False) == True
+tf(True) || ft(True) == True
+ft(False) || uu(False) == True
+Continue [c], break [B] or run nonstop? [r] B
+ft(True) || uu(True) is undefined
+ft(False) || fu(False) == True
+ft(True) || fu(True) == False
+ft(False) || uf(False) == True
+Continue [c], break [B] or run nonstop? [r] B
+ft(True) || uf(True) is undefined
+ft(False) || ff(False) == True
+ft(True) || ff(True) == False
+ft(False) || tu(False) == True
+ft(True) || tu(True) == True
+ft(False) || ut(False) == True
+Continue [c], break [B] or run nonstop? [r] r
