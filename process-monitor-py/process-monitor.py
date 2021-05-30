@@ -27,7 +27,7 @@ def print_battery():
         battery_stats.percent,
         battery_stats.power_plugged
     ])
-    print(battery_table, file=OUTPUT_FILE)
+    print(battery_table)  # , file=OUTPUT_FILE)
 
 
 # Network Information
@@ -43,7 +43,7 @@ def print_network():
             'Up' if network_stats.isup else 'Down',
             network_stats.speed
         ])
-    print(network_table.get_string(sortby='Speed', reversesort=True), file=OUTPUT_FILE)
+    print(network_table.get_string(sortby='Speed', reversesort=True))  # , file=OUTPUT_FILE)
 
 
 # Memory Information
@@ -60,7 +60,7 @@ def print_memory():
         memory_stats.available // mb,
         memory_stats.percent
     ])
-    print(memory_table, file=OUTPUT_FILE)
+    print(memory_table)  # , file=OUTPUT_FILE)
 
 
 ACTIVE_PIDS = {}
@@ -91,13 +91,13 @@ def print_process():
         except Exception as e:  # the process finished before we could print its information
             pass
     table = process_table.get_string(sort_key=lambda row: float(row[5][:-1]), sortby='Memory', reversesort=True)
-    print(table, file=OUTPUT_FILE)
+    print(table)  # , file=OUTPUT_FILE)
     print(file=OUTPUT_FILE)
     for process_id in NEW_PIDS.keys() - ACTIVE_PIDS.keys():
-        print(f'New process {process_id}, {NEW_PIDS[process_id]}', file=OUTPUT_FILE)
+        print(f'New process {process_id}, {NEW_PIDS[process_id]}')  # , file=OUTPUT_FILE)
     print(file=OUTPUT_FILE)
     for process_id in ACTIVE_PIDS.keys() - NEW_PIDS.keys():
-        print(f'Process {process_id}, {ACTIVE_PIDS[process_id]} has finished', file=OUTPUT_FILE)
+        print(f'Process {process_id}, {ACTIVE_PIDS[process_id]} has finished')  # , file=OUTPUT_FILE)
     ACTIVE_PIDS = NEW_PIDS
 
 

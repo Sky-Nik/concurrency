@@ -6,6 +6,7 @@ This repository contains the following labworks:
 - Labwork 2: Asynchronous Computations in Python.
 - Labwork 3: Process Monitor in Python.
 - Bonus Labwork 1: Dining Philosophers in Java.
+- Bonus Labwork 3: Shared Memory Computations in Python.
 
 Every labwork directory contains:
 - a source code file (`.{cpp,py,java}`);
