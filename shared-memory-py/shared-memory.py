@@ -13,46 +13,52 @@ def g(x):
         sleep(1)
 
 
-def proc(function, argument, global_result, count_finished):
+def target(function, argument, global_result, count_finished):
     local_result = function(argument)
+
     with global_result.get_lock():
         global_result.value |= local_result
+
     with count_finished.get_lock():
         count_finished.value += 1
 
 
-def main(f, g, x):
-    expression = f"{f.__name__}({x}) || {g.__name__}({x})"
+def main(functions, argument):
+    expression = " || ".join(f"{function.__name__}({argument})" for function in functions)
 
     global_result = Value('b', False)
     count_finished = Value('i', 0)
 
-    first_process = Process(target=proc, args=(f, x, global_result, count_finished))
-    second_process = Process(target=proc, args=(g, x, global_result, count_finished))
+    processes = [Process(target=target, args=(function, argument, global_result, count_finished)) for function in functions]
 
-    first_process.start()
-    second_process.start()
+    for process in processes:
+        process.start()
 
     stop = True
 
-    while not global_result.value and count_finished.value < 2:
-        first_process.join(timeout=1)
-        second_process.join(timeout=1)
+    while not global_result.value and count_finished.value < len(processes):
+        for process in processes:
+            process.join(timeout=1)
+
         if stop:
             mode = input("Continue [c], break [B] or run nonstop? [r] ")
+
             if mode == 'B':
                 print(f"{expression} is undefined")
-                first_process.terminate()
-                second_process.terminate()
+
+                for process in processes:
+                    process.terminate()
                 return
+
             if mode == 'r':
                 stop = False
     else:
         print(f"{expression} == {global_result.value}")
-        first_process.terminate()
-        second_process.terminate()
+
+        for process in processes:
+            process.terminate()
 
 
 if __name__ == '__main__':
-    x = bool(int(input("Enter x [0/1]: ")))
-    main(f, g, x)
+    argument = bool(int(input("Enter argument [0/1]: ")))
+    main([f, g], argument)
